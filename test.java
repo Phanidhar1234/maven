@@ -1,35 +1,26 @@
-/*
-  Find Largest and Smallest Number in an Array Example
-  This Java Example shows how to find largest and smallest number in an
-  array.
-*/
-public class FindLargestSmallestNumber {
- 
-        public static void main(String[] args) {
-               
-                //array of 10 numbers
-                int numbers[] = new int[]{32,43,53,54,32,65,63,98,43,23};
-               
-                //assign first element of an array to largest and smallest
-                int smallest = numbers[0];
-                int largetst = numbers[0];
-               
-                for(int i=1; i< numbers.length; i++)
-                {
-                        if(numbers[i] > largetst)
-                                largetst = numbers[i];
-                        else if (numbers[i] < smallest)
-                                smallest = numbers[i];
-                       
-                }
-               
-                System.out.println("Largest Number is : " + largetst);
-                System.out.println("Smallest Number is : " + smallest);
-        }
+package com.mkyong.core.utils;
+
+import org.apache.log4j.Logger;
+import org.joda.time.LocalDate;
+
+public class App {
+
+	private static final Logger logger = Logger.getLogger(App.class);
+
+	public static void main(String[] args) {
+		System.out.println(getLocalCurrentDate());
+	}
+
+	private static String getLocalCurrentDate() {
+
+		if (logger.isDebugEnabled()) {
+			logger.debug("getLocalCurrentDate() is executed!");
+		}
+
+		LocalDate date = new LocalDate();
+		return date.toString();
+
+	}
+
 }
- 
-/*
-Output of this program would be
-Largest Number is : 98
-Smallest Number is : 23
-*/
+Now, this project 
